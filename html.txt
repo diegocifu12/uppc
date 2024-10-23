@@ -1,0 +1,80 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotación de Úlceras por Presión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nuevo_registro">Nuevo Registro</a></li>
+            <li><a href="#listado_registros">Listado de Registros</a></li>
+            <li><a href="#configuracion">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h1>Rotación de Úlceras por Presión</h1>
+        <p>Esta página web automatizada te ayuda a realizar registros de úlceras por presión y a mantener un temporizador para las revisiones.</p>
+    </section>
+
+    <section id="nuevo_registro">
+        <h2>Nuevo Registro</h2>
+        <form id="registro-form">
+            <label for="nombre_paciente">Nombre del paciente:</label>
+            <input type="text" id="nombre_paciente" name="nombre_paciente"><br><br>
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+            <label for="ubicacion_ulcera">Ubicación de la úlcera:</label>
+            <input type="text" id="ubicacion_ulcera" name="ubicacion_ulcera"><br><br>
+            <label for="gravedad_ulcera">Gravedad de la úlcera:</label>
+            <input type="text" id="gravedad_ulcera" name="gravedad_ulcera"><br><br>
+            <label for="diagnostico_medico">Diagnóstico médico:</label>
+            <input type="text" id="diagnostico_medico" name="diagnostico_medico"><br><br>
+            <label for="fecha_inicio_ulcera">Fecha de inicio de la úlcera:</label>
+            <input type="date" id="fecha_inicio_ulcera" name="fecha_inicio_ulcera"><br><br>
+            <label for="fecha_ultima_revision">Fecha de última revisión:</label>
+            <input type="date" id="fecha_ultima_revision" name="fecha_ultima_revision"><br><br>
+            <label for="notas_adicionales">Notas adicionales:</label>
+            <textarea id="notas_adicionales" name="notas_adicionales"></textarea><br><br>
+            <button type="submit" id="submit-btn">Guardar Registro</button>
+        </form>
+    </section>
+
+    <section id="listado_registros">
+        <h2>Listado de Registros</h2>
+        <table id="registros-table">
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Ubicación</th>
+                    <th>Gravedad</th>
+                    <th>Diagnóstico</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Última Revisión</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="registros-body">
+            </tbody>
+        </table>
+    </section>
+
+    <section id="configuracion">
+        <h2>Configuración</h2>
+        <form id="configuracion-form">
+            <label for="intervalo_revision">Intervalo de tiempo para revisión (minutos):</label>
+            <input type="number" id="intervalo_revision" name="intervalo_revision"><br><br>
+            <label for="campos_registro">Campos del registro:</label>
+            <textarea id="campos_registro" name="campos_registro"></textarea><br><br>
+            <button type="submit" id="guardar-configuracion-btn">Guardar Configuración</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
